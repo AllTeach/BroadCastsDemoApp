@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/androidimg"
+
+    android:orientation="vertical"
+    tools:context=".DynamicSystemBroadcastActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="show"
+        android:text="Click for Explanation"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#ff00"
+        android:textStyle="italic"
+        android:textSize="15sp"
+        android:visibility="invisible"
+        android:id="@+id/tvDynamicExplain"
+        android:text="This Activity registers dynamically two broadcast receivers.\n
+        Headset Plug/Unplug and PHone state\n
+        notice that for Phone state permission required first time\n
+         1) created in onCreate \n
+         2) Registered in onResume\n
+         3) Unregistered in onPause\n
+         permission has been asked in the Android Manifest"/>
+
+</LinearLayout>
