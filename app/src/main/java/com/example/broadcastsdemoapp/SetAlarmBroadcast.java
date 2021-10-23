@@ -23,10 +23,10 @@ public class SetAlarmBroadcast extends AppCompatActivity {
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             alarmManager.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()
-                    + (i * 1000), pendingIntent);
+                    + (20 * 1000), pendingIntent);
         }
             else
-               alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()
+               alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, System.currentTimeMillis()
                     + (i * 1000), pendingIntent);
 
         Toast.makeText(this, "Alarm set in " + i + " seconds",Toast.LENGTH_LONG).show();

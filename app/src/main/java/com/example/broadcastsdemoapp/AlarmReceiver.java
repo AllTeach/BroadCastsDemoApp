@@ -48,8 +48,6 @@ public class AlarmReceiver extends BroadcastReceiver {
             // this is optional - just for example:
        //     Intent notifyIntent = new Intent(context, MainActivity.class);
             Intent notifyIntent = new Intent(context,SendCustomBroadcast.class);
-
-
             // Set the Activity to start in a new, empty task
             // no need to carry the task stack in this example
             //| Intent.FLAG_ACTIVITY_TASK_ON_HOME
